@@ -79,6 +79,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   cf.policy_server_address = "10.0.2.15"
   # end
     config.omnibus.chef_version = :latest
+    config.berkshelf.enabled = true
     config.vm.provision :chef_solo do |chef|
         chef.cookbooks_path = [
           "cookbooks",
@@ -94,11 +95,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             "recipe[mysql::client]",
             "recipe[php-fpm]"
         ]
-        #chef.json = {
-        #    mysql: {
-        #        server_root_password: ''
-        #    }
-        #}
+        chef.json = {
+            mysql: {
+                version: "5.6",
+                server_root_password: ''
+            }
+        }
     end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
