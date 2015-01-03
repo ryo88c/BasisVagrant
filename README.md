@@ -11,10 +11,11 @@ https://downloads.chef.io/chef-dk/
 # Install
 
 ```
-berks
 bundle --path vendor/bundle --binstubs vendor/bin
 bundle exec knife conifigure
 vagrant up
+vagrant ssh-config --host basis >> ~/.ssh/config
+bundle exec knife solo cook basis
 vagrant package --output basis
 ```
 

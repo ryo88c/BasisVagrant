@@ -24,8 +24,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.network :private_network, type: 'dhcp'
+   config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.network :private_network, type: 'dhcp'
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -42,6 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
     config.vm.synced_folder "./www", "/var/www", :create => true
+    config.vm.hostname = "BASIS"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -78,30 +79,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.provision "cfengine" do |cf|
   #   cf.policy_server_address = "10.0.2.15"
   # end
-    config.omnibus.chef_version = :latest
-    config.berkshelf.enabled = true
-    config.vm.provision :chef_solo do |chef|
-        chef.cookbooks_path = [
-          "cookbooks",
-          "site-cookbooks"
-        ]
-        chef.run_list = [
-            "recipe[vim]",
-            "recipe[zsh]",
-            "recipe[tmux]",
-            "recipe[git]",
-            "recipe[nginx]",
-            "recipe[mysql::server]",
-            "recipe[mysql::client]",
-            "recipe[php-fpm]"
-        ]
-        chef.json = {
-            mysql: {
-                version: "5.6",
-                server_root_password: ''
-            }
-        }
-    end
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
