@@ -17,6 +17,9 @@ vagrant up
 vagrant ssh-config --host basis >> ~/.ssh/config
 bundle exec knife solo cook basis
 vagrant package --output basis
+vagrant box add basis basis
+rm basis
+vagrant box list|grep basis
 ```
 
 You can use the VM that already installed basic middlewares.
