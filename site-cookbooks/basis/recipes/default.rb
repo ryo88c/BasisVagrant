@@ -26,6 +26,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
+bash "Update" do
+    code <<-EOT
+        aptitude update
+    EOT
+end
 package 'vim' do
   action :install
 end

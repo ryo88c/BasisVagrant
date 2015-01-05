@@ -199,8 +199,6 @@ alias gitboth='gs|grep "both modified"|sed -e "s/#\tboth modified:      /subl /g
 alias glf='git log --oneline --decorate --graph --branches --tags --remotes'
 alias phpcsall="git diff --cached --name-only --diff-filter=AM|grep '\.php'|xargs phpcs -pns --standard=BEAR --encoding=utf-8 $1 "
 
-# not yet: [ -s "/home/gge/.nvm/nvm.sh" ] && . "/home/gge/.nvm/nvm.sh" # This loads nvm
-
 REPORTTIME=3
 
 sudo service ntp stop && sudo ntpdate 210.173.160.27 && sudo service ntp start
