@@ -109,6 +109,9 @@ end
 package "tree" do
   action :install
 end
+package "npm" do
+  action :install
+end
 bash "Set vagrant's shell to zsh" do
     code <<-EOT
         chsh -s /usr/bin/zsh vagrant
