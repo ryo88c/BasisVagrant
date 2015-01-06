@@ -129,3 +129,10 @@ cookbook_file '/usr/bin/phpunit' do
     source "phpunit"
     mode "0755"
 end
+bash "Set up nvm" do
+    code <<-EOT
+        curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash
+        nvm install stable
+        npm -g install gulp gulp-compass gulp-watch gulp-uglify gulp-minify-css component
+    EOT
+end
