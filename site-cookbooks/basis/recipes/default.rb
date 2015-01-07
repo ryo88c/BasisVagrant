@@ -129,6 +129,11 @@ cookbook_file '/usr/bin/phpunit' do
     source "phpunit"
     mode "0755"
 end
+bash "Install gems" do
+    code <<-EOT
+        gem install compass
+    EOT
+end
 bash "Set up nvm" do
     code <<-EOT
         curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash
