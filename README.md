@@ -28,6 +28,7 @@ vagrant box list|grep basis
 2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
 3. Install [Cygwin](http://cygwin.com/install.html) *Install Ruby, Rubygem, Bundler, and Git while install Cygwin.*
 4. Perform Cygwin, and clone this repository. Ex. `git clone https://github.com/ryo88c/BasisVagrant.git`
+5. Perform `gem install lack ffi`.
 
 You can use the VM that already installed basic middlewares.
 For example: `vagrant init basis`
