@@ -26,9 +26,20 @@ vagrant box list|grep basis
 
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
-3. Install [Cygwin](http://cygwin.com/install.html) *Install Ruby, Rubygem, Bundler, and Git while install Cygwin.*
-4. Perform Cygwin, and clone this repository. Ex. `git clone https://github.com/ryo88c/BasisVagrant.git`
-5. Perform `gem install lack ffi`.
+3. Install [Cygwin](http://cygwin.com/install.html) 
+4. Install unzip openssl openssh curl colorgcc gcc-core git git-completion libtool libncurses-devel make openssl-devel cygwin32-readline zlib zlib-devel libyaml-devel libyaml0_2 patch sqlite3 autoconf automake bison m4 mingw64-i686-gcc-core mingw64-x86_64-gcc-core as package of Cygwin.
+5. Run Cygwin
+6. `mkdir repositories`
+7. `cd repositories`
+8. `mkdir developwithpassion`
+9. `cd developwithpassion`
+10. `git clone git://github.com/developwithpassion/devtools`
+11. `cd devtools`
+12. `./osx_or_cygwin_kick_off`
+13. `cd ~`
+14. `git clone https://github.com/ryo88c/BasisVagrant.git`
+
+Via: http://blog.developwithpassion.com/2012/03/30/installing-rvm-with-cygwin-on-windows/
 
 You can use the VM that already installed basic middlewares.
 For example: `vagrant init basis`
