@@ -27,7 +27,7 @@ vagrant box list|grep basis
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
 3. Install [Cygwin](http://cygwin.com/install.html) 
-4. Install unzip openssl openssh curl colorgcc gcc-core git git-completion libtool libncurses-devel make openssl-devel cygwin32-readline zlib zlib-devel libyaml-devel libyaml0_2 patch sqlite3 autoconf automake bison m4 mingw64-i686-gcc-core mingw64-x86_64-gcc-core as package of Cygwin.
+4. Install `unzip openssl openssh curl colorgcc gcc-core git git-completion libtool libncurses-devel make openssl-devel cygwin32-readline zlib zlib-devel libyaml-devel libyaml0_2 patch sqlite3 autoconf automake bison m4 mingw64-i686-gcc-core mingw64-x86_64-gcc-core libffi-devel ruby-pkg-config` as package of Cygwin.
 5. Run Cygwin
 6. `mkdir repositories`
 7. `cd repositories`
