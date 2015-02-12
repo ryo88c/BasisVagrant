@@ -43,6 +43,9 @@ end
 package 'git' do
   action :install
 end
+package 'git-flow' do
+  action :install
+end
 package 'curl' do
   action :install
 end
