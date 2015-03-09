@@ -8,6 +8,22 @@ This repository is the basis of Vagrant.
 Install Chef DK.
 https://downloads.chef.io/chef-dk/
 
+# Install rbenv
+
+```
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+mkdir -p ~/.rbenv/plugins
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+sudo port install openssl readline libiconv
+CONFIGURE_OPTS="--with-openssl-dir=/opt/local --with-readline-dir=/opt/local --with-iconv-dir=/opt/local" rbenv install 2.1.2
+rbenv rehash
+rbenv global 2.1.2
+sudo curl "http://curl.haxx.se/ca/cacert.pem" -o /opt/local/etc/openssl/cert.pem
+```
+
 # Install
 
 ```
