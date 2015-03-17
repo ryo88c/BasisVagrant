@@ -28,7 +28,6 @@ sudo curl "http://curl.haxx.se/ca/cacert.pem" -o /opt/local/etc/openssl/cert.pem
 
 ```
 bundle --path vendor/bundle --binstubs vendor/bin
-bundle exec knife configure
 vagrant up
 vagrant ssh-config --host basis >> ~/.ssh/config
 bundle exec knife solo cook basis
