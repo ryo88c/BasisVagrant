@@ -143,6 +143,7 @@ end
 bash "Set up nvm" do
     code <<-EOT
         curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash
+        source ~/.nvm/nvm.sh
         nvm install stable
         npm -g install gulp gulp-compass gulp-watch gulp-uglify gulp-minify-css bower gulp-bower main-bower-files orchestrator
     EOT
